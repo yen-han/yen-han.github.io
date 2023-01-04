@@ -1,0 +1,31 @@
+@import "styles/var.scss";
+
+.Intro {
+  height: 50vh;
+  margin: auto 30px;
+  position: relative;
+
+  @media screen and (max-width: 375px) {
+    margin: 0;
+  }
+
+  .container {
+    position: absolute;
+    @include vertical-center;
+  }
+
+  .title {
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .preface {
+    font-weight: 400;
+  }
+
+  .desc {
+    font-weight: 300;
+    line-height: 1.7;
+    margin-bottom: 30px;
+  }
+}

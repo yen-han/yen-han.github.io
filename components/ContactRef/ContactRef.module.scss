@@ -1,0 +1,16 @@
+@import "styles/var.scss";
+
+.ContactRef {
+  .reference a {
+    margin: 0 20px 0 0;
+  }
+
+  .reference i {
+    font-size: 1.4rem;
+    color: $main-font-color;
+
+    &:hover {
+      color: $teal;
+    }
+  }
+}

@@ -1,0 +1,26 @@
+@import "styles/var.scss";
+
+.Contact {
+  height: 40vh;
+  margin: 30px;
+  position: relative;
+
+  @media screen and (max-width: 375px) {
+    margin: 0;
+  }
+
+  .container {
+    position: absolute;
+    @include vertical-center;
+  }
+
+  .contactTitle {
+    margin-bottom: 20px;
+    font-weight: 700;
+  }
+
+  .contactDesc {
+    font-weight: 300;
+    line-height: 1.7;
+  }
+}

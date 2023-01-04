@@ -1,24 +1,47 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
+import Head from "next/head";
+
+import Intro from "../components/Intro/Intro";
+import Nav from "../components/Nav/Nav";
+import Project from "../components/Project/Project";
+import Contact from "../components/Contact/Contact";
+import styles from "./index.module.scss";
+
+import { projects } from "../data/projects";
+import { introduction } from "../data/introduction";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
+    <div>
       <Head>
-        <title>Yeeun (Yen) Han</title>
-        <meta name="description" content="Yeeun Han's Profile" />
+        <title>Yen Han</title>
+        <meta name="description" content="Yen Han's Page" />
+        <meta name="author" content="Yen Han" />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Yeeun (Yen) Han
-        </h1>
+      <Nav />
+      <main className={styles.Home} id="projects">
+        <Intro data={introduction} />
+        <hr />
+        <section className={styles.projects}>
+          {projects.map((project, index) => {
+            if (index + 1 == projects.length)
+              return <Project data={project} key={index} />;
+            else
+              return (
+                <>
+                  <Project data={project} key={index} />
+                  <hr className={styles.divider} />
+                </>
+              );
+          })}
+        </section>
+        <hr />
+        <Contact />
+        <hr />
       </main>
 
-      <footer className={styles.footer}>
-      </footer>
+      <footer className={styles.footer}>© 2023 Yen (Yeeun) Han</footer>
     </div>
-  )
+  );
 }

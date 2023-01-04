@@ -1,0 +1,46 @@
+@import "styles/var.scss";
+
+.Nav {
+  padding: 12px 30px;
+  display: flex;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 100;
+  background-color: $ivory;
+  border-bottom: 1px solid #e1e1de;
+
+  .logo {
+    line-height: 1.15;
+    margin-right: 40px;
+  }
+
+  .logo > a {
+    font-weight: 700;
+  }
+
+  .lastname {
+    margin-left: 10px;
+  }
+
+  a {
+    align-self: center;
+    color: $main-font-color;
+    text-decoration: none;
+    font-weight: 600;
+    &:hover {
+      color: $teal;
+    }
+  }
+
+  .link {
+    margin-right: 30px;
+  }
+
+  .container {
+    position: absolute;
+    right: 20px;
+    top: 30%;
+  }
+}

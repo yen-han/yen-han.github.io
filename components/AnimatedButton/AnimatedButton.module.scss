@@ -1,0 +1,38 @@
+@import "styles/var.scss";
+
+.AnimatedButton {
+  margin: 20px 0;
+
+  .chevron {
+    color: $ivory;
+    width: 8px;
+    height: 8px;
+    transform: rotate(-90deg);
+    margin-right: 20px;
+  }
+
+  .background {
+    background-color: $teal;
+    width: fit-content;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+
+    &:hover {
+      background-color: $teal;
+      opacity: 1;
+    }
+  }
+
+  .copyContainer {
+    position: relative;
+    padding: 9px 20px;
+
+    > .copy {
+      margin: auto;
+      font-size: 16px;
+      color: $ivory;
+      white-space: nowrap;
+    }
+  }
+}

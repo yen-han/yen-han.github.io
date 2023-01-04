@@ -1,0 +1,73 @@
+@import "styles/var.scss";
+
+.Project {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  margin: 40px 30px;
+
+  @media (max-width: 375px) {
+    flex-direction: column;
+    margin: 40px 0;
+  }
+
+  @media (max-width: 768px) and (min-width: 376px) {
+    flex-direction: column;
+  }
+
+  .videoContainer {
+    margin: 0;
+    min-width: 40%;
+    max-width: 40%;
+    background-color: $light-gray;
+    padding: 20px;
+    height: 350px;
+    border-radius: 25px;
+
+    @media screen and (max-width: 768px) {
+      margin-bottom: 20px;
+      min-width: 100%;
+      max-width: 100%;
+    }
+  }
+
+  video {
+    position: relative;
+    width: 95%;
+    height: 95%;
+    @include center;
+  }
+
+  .prjContainer {
+    margin-left: 30px;
+
+    @media screen and (max-width: 375px) {
+      margin-left: 0;
+    }
+
+    @media screen and (max-width: 768px) {
+      margin-top: 20px;
+    }
+  }
+
+  .prjDesc {
+    font-weight: 300;
+    line-height: 1.7;
+  }
+
+  .features {
+    margin: 5px 20px;
+    font-weight: 300;
+    font-size: 18px;
+
+    > li {
+      line-height: 1.7;
+    }
+  }
+
+  .skills {
+    font-size: 18px;
+    margin: 0 20px 30px;
+    font-weight: 300;
+  }
+}

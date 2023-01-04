@@ -1,0 +1,18 @@
+// Color
+$black: #000;
+$main-font-color: #232323;
+$light-gray: #f1f1f1;
+$ivory: #fdfdfa;
+$white: #fff;
+$teal: #008080;
+
+@mixin center {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin vertical-center {
+  top: 50%;
+  transform: translateY(-50%);
+}
