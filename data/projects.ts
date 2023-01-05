@@ -7,7 +7,7 @@ export const projects = [
     features:['Present response of REST API as a table format', 
     'Loading animation while waiting for API response',
     'Style with external UI (Chakra UI)'],
-    skills: ['NextJS', 'React', 'TypeScript', 'SCSS', 'Chakra UI'],
+    skills: ['NextJS', 'React', 'TypeScript', 'SASS', 'Chakra UI'],
     detail:{
         copy:'Coming Soon',
         link:'#'
