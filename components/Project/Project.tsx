@@ -36,7 +36,7 @@ function Project({ data }: Props) {
           })}
         </div>
         <div className={styles.skills}>
-          -
+          - Coded with
           {data.skills.map((skill, index) => {
             if (index + 1 == data.skills.length)
               return <span key={index}> {skill}</span>;

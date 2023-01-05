@@ -29,10 +29,10 @@ export default function Home() {
               return <Project data={project} key={index} />;
             else
               return (
-                <>
-                  <Project data={project} key={index} />
+                <div key={index}>
+                  <Project data={project} />
                   <hr className={styles.divider} />
-                </>
+                </div>
               );
           })}
         </section>
