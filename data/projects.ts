@@ -10,7 +10,7 @@ export const projects = [
     skills: ['NextJS', 'React', 'TypeScript', 'SASS', 'Chakra UI'],
     detail:{
         copy:'Coming Soon',
-        link:'#'
+        link:'/#projects'
     }
 },
 {
@@ -25,7 +25,7 @@ export const projects = [
     skills: ['C++'],
     detail:{
         copy:'Coming Soon',
-        link:'#'
+        link:'/#projects'
     }
 },
 // {

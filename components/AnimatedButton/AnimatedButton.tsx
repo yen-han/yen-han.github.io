@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { useRef } from "react";
 import styles from "./AnimatedButton.module.scss";
 
@@ -13,7 +14,9 @@ function AnimatedButton({ data }: Props) {
     <section className={styles.AnimatedButton} ref={onRef}>
       <div className={styles.background}>
         <div className={styles.copyContainer}>
-          <p className={styles.copy}>{data.copy}</p>
+          <Link href={data.link} className={styles.link}>
+            {data.copy}
+          </Link>
         </div>
         <svg className={styles.chevron} viewBox="0 0 7 4">
           <path

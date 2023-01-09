@@ -13,10 +13,10 @@ function Nav() {
         </Link>
       </div>
       <div className={styles.container}>
-        <Link href="#projects" className={styles.link}>
+        <Link href="/#projects" className={styles.link}>
           Projects
         </Link>
-        <Link href="#contact" className={styles.link}>
+        <Link href="/#contact" className={styles.link}>
           Connect
         </Link>
       </div>
