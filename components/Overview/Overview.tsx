@@ -1,5 +1,5 @@
 import styles from "../Overview/Overview.module.scss";
-import Image from "next/image";
+// import Image from "next/image";
 export type Props = {
   data: {
     id: number;
@@ -22,7 +22,7 @@ function Overview({ data }: Props) {
   return (
     <section className={styles.Overview} id="">
       <div className={styles.container}>
-        <Image
+        <img
           className={styles.image}
           src={image_src}
           alt="Picture of the message generator"
