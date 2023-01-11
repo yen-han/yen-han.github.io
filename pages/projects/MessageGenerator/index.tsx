@@ -1,9 +1,11 @@
 import Nav from "../../../components/Nav/Nav";
+import Overview from "../../../components/Overview/Overview";
+import { projects } from "../../../data/projects";
 export default function MessageGenerator() {
   return (
     <>
       <Nav />
-      <div>Message Generator page</div>
+      <Overview data={projects[0]} />
     </>
   );
 }
