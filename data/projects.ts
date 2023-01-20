@@ -2,13 +2,13 @@ export const projects = [
 {
     id: 1,
     title: 'Message Generator',
-    description: 'Implement dashboard to generate tweets & thank-you messages using OpenAI API GPT-3',
+    description: 'Implement dashboard to generate & manage thank-you messages using OpenAI API GPT-3',
     media: 'message-generator.mov',
     image: 'message-generator-after.png',
     features:['Present response of REST API as a table format', 
-    'Loading animation while waiting for API response',
+    'Save & delete functionality to manage messages from database',
     'Style with external UI (Chakra UI)'],
-    skills: ['NextJS', 'React', 'TypeScript', 'SASS', 'Chakra UI'],
+    skills: ['NextJS', 'React', 'JavaScript', 'MongoDB', 'SASS', 'Chakra UI'],
     detail:{
         copy:'Coming Soon',
         link:'/#projects'
@@ -29,18 +29,6 @@ export const projects = [
         copy:'Coming Soon',
         link:'/#projects'
     }
-},
-// {
-//     id: 3,
-//     title: 'News Board',
-//     description: 'A simple grade calculator that calculates your grade based on your current grade and the grade you want to achieve.',
-//     media: '/images/grade-calculator.png',
-//     features:['Apply pagination', 'Filter by category'],
-//     skills: [ 'React', 'REST API'],
-//     detail:{
-//         copy:'Read More',
-//         link:'https://github.com/yen-han/GradeCalculator'
-//     }
-// }
+}
 ];
 
