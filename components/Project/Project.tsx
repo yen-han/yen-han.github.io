@@ -1,7 +1,8 @@
 import classnames from "classnames";
 import styles from "./Project.module.scss";
 import AnimatedButton from "../AnimatedButton/AnimatedButton";
-
+import AnimatedText from "../AnimatedText/AnimatedText";
+import { useEffect, useState } from "react";
 export type Props = {
   data: {
     id: number;
@@ -19,7 +20,15 @@ export type Props = {
 
 function Project({ data }: Props) {
   let src = "assets/video/" + data.media;
-
+  const [skillSet, setSkillSet] = useState("");
+  useEffect(() => {
+    let str = "- Coded with ";
+    data.skills.forEach((skill, index) => {
+      if (index + 1 == data.skills.length) str += skill;
+      else str += skill + ", ";
+    });
+    setSkillSet(str);
+  });
   return (
     <section className={classnames(styles.Project)}>
       <div className={classnames(styles.videoContainer)}>
@@ -28,20 +37,24 @@ function Project({ data }: Props) {
         </video>
       </div>
       <div className={styles.prjContainer}>
-        <h3 className={styles.prjTitle}>{data.title}</h3>
-        <p className={styles.prjDesc}>{data.description}</p>
+        <h3 className={styles.prjTitle}>
+          <AnimatedText text={data.title} type={"title"} />
+        </h3>
+        <div className={styles.prjDesc}>
+          <AnimatedText text={data.description} type={"paragraph"} />
+        </div>
         <div className={styles.features}>
           {data.features.map((feature, index) => {
-            return <li key={index}>- {feature}</li>;
+            // return <li key={index}>- {feature}</li>;
+            return (
+              <li key={index}>
+                <AnimatedText text={"- " + feature} type={"list"} />
+              </li>
+            );
           })}
-        </div>
-        <div className={styles.skills}>
-          - Coded with
-          {data.skills.map((skill, index) => {
-            if (index + 1 == data.skills.length)
-              return <span key={index}> {skill}</span>;
-            else return <span key={index}> {skill},</span>;
-          })}
+          <li>
+            <AnimatedText text={skillSet} type={"list"} />
+          </li>
         </div>
         <AnimatedButton data={data.detail} />
       </div>

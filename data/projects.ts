@@ -7,11 +7,13 @@ export const projects = [
     image: 'message-generator-after.png',
     features:['Present response of REST API as a table format', 
     'Save & delete functionality to manage messages from database',
+    'Responsive design for desktop, tablet & mobile',
     'Style with external UI (Chakra UI)'],
-    skills: ['NextJS', 'React', 'JavaScript', 'MongoDB', 'SASS', 'Chakra UI'],
+    skills: ['NextJS', 'React', 'JavaScript', 'MongoDB', 'SCSS', 'Chakra UI'],
     detail:{
         copy:'Coming Soon',
         link:'/#projects'
+        // link:'/projects/MessageGenerator'
     }
 },
 {

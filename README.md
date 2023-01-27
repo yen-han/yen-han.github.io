@@ -6,3 +6,9 @@ There are more to come! I hope you enjoy.
 Feel free to ping me with an issue for unexpected behaviors or bugs.
 
 The page is built with Next.js, React, TypeScript, SASS, Bootstrap.
+
+### Improvement
+
+- [ ] Text animator
+- [ ] Project Detailed Page(Overview, Challenges, Approach, Retrospective)
+- [ ] Layout
