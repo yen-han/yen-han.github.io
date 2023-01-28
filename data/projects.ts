@@ -11,8 +11,8 @@ export const projects = [
     'Style with external UI (Chakra UI)'],
     skills: ['NextJS', 'React', 'JavaScript', 'MongoDB', 'SCSS', 'Chakra UI'],
     detail:{
-        copy:'Coming Soon',
-        link:'/#projects'
+        copy:'Source Code',
+        link:'https://github.com/yen-han/AI-Message-Generator'
         // link:'/projects/MessageGenerator'
     }
 },
@@ -28,8 +28,8 @@ export const projects = [
     'Safeguard from unexpected inputs such as negative scores, case sensitivity'],
     skills: ['C++'],
     detail:{
-        copy:'Coming Soon',
-        link:'/#projects'
+        copy:'Source Code',
+        link:'https://github.com/yen-han/GradeCalculator'
     }
 }
 ];

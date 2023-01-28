@@ -12,7 +12,7 @@
   }
 
   .background {
-    background-color: $teal;
+    background-color: rgb(87, 87, 87);
     width: fit-content;
     border-radius: 50px;
     display: flex;
@@ -24,15 +24,11 @@
     }
   }
 
-  .copyContainer {
-    position: relative;
+  .copy {
     padding: 9px 20px;
-
-    > .link {
-      margin: auto;
-      font-size: 16px;
-      color: $ivory;
-      white-space: nowrap;
-    }
+    margin: auto;
+    font-size: 16px;
+    color: $ivory;
+    white-space: nowrap;
   }
 }
