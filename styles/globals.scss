@@ -5,7 +5,7 @@ body {
   width: 100%;
   font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  color: $main-font-color;
+  color: $main-gray-color;
   background-color: $ivory;
 }
 
@@ -37,7 +37,7 @@ li {
 
 i {
   font-size: 1.4rem;
-  color: $main-font-color;
+  color: $main-gray-color;
 
   &:hover {
     color: $teal;
