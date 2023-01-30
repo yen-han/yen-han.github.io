@@ -12,26 +12,15 @@
   }
 
   .background {
-    background-color: rgb(87, 87, 87);
+    background-color: #575757;
     width: fit-content;
     border-radius: 50px;
     display: flex;
     align-items: center;
-
-    &:hover {
-      background-color: $teal;
-      opacity: 1;
-
-      .chevron {
-        transition-duration: 0.5s;
-        transform: translateX(7px) rotate(-90deg);
-        transition-timing-function: ease-in-out;
-      }
-    }
   }
 
   .copy {
-    padding: 9px 20px;
+    padding: 10px 15px 10px 20px;
     margin: auto;
     font-size: 16px;
     color: $ivory;
