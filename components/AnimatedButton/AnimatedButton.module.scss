@@ -2,28 +2,48 @@
 
 .AnimatedButton {
   margin: 20px 0;
-
-  .chevron {
-    color: $ivory;
-    width: 8px;
-    height: 8px;
-    transform: rotate(-90deg);
-    margin-right: 20px;
-  }
+  display: flex;
 
   .background {
     background-color: #575757;
     width: fit-content;
     border-radius: 50px;
+    position: absolute;
+
+    &:hover {
+      .copy {
+        color: $main-gray-color;
+      }
+    }
+  }
+
+  .container {
     display: flex;
-    align-items: center;
   }
 
   .copy {
-    padding: 10px 15px 10px 20px;
-    margin: auto;
+    padding: 10px 10px 10px 20px;
+    margin: 0;
     font-size: 16px;
     color: $ivory;
     white-space: nowrap;
+  }
+
+  .chevronContainer {
+    align-self: center;
+    border-radius: 50px;
+    width: 40px;
+    height: 40px;
+  }
+
+  .chevron {
+    display: flex;
+    color: $ivory;
+    width: 8px;
+    height: 8px;
+    transform: rotate(-90deg);
+    top: 40%;
+    left: 40%;
+    position: relative;
   }
 }
