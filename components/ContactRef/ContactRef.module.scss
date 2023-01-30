@@ -1,8 +1,11 @@
 @import "styles/var.scss";
 
 .ContactRef {
-  .reference a {
-    margin: 0 20px 0 0;
+  .reference {
+    display: flex;
+    a {
+      margin: 0 20px 0 0;
+    }
   }
 
   .reference i {
