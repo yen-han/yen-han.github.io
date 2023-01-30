@@ -21,6 +21,12 @@
     &:hover {
       background-color: $teal;
       opacity: 1;
+
+      .chevron {
+        transition-duration: 0.5s;
+        transform: translateX(7px) rotate(-90deg);
+        transition-timing-function: ease-in-out;
+      }
     }
   }
 

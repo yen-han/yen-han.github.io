@@ -1,5 +1,4 @@
-import Link from "next/link";
-import { useRef } from "react";
+import { useEffect, useRef } from "react";
 import styles from "./AnimatedButton.module.scss";
 
 export type Props = {
@@ -8,10 +7,11 @@ export type Props = {
     link: string;
   };
 };
+
 function AnimatedButton({ data }: Props) {
-  const onRef = useRef<HTMLDivElement>(null);
+  const chevronRef = useRef<HTMLDivElement>(null);
   return (
-    <section className={styles.AnimatedButton} ref={onRef}>
+    <section className={styles.AnimatedButton}>
       <a
         className={styles.background}
         target="_blank"
