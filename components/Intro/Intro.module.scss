@@ -27,5 +27,8 @@
     font-weight: 300;
     line-height: 1.7;
     margin-bottom: 30px;
+    > p {
+      margin-bottom: 0;
+    }
   }
 }

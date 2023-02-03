@@ -38,23 +38,15 @@ function Project({ data }: Props) {
       </div>
       <div className={styles.prjContainer}>
         <h3 className={styles.prjTitle}>
-          <AnimatedText text={data.title} type={"title"} />
+          <AnimatedText text={data.title} />
         </h3>
-        <div className={styles.prjDesc}>
-          <AnimatedText text={data.description} type={"paragraph"} />
-        </div>
+        <p className={styles.prjDesc}>{data.description}</p>
         <div className={styles.features}>
           {data.features.map((feature, index) => {
             // return <li key={index}>- {feature}</li>;
-            return (
-              <li key={index}>
-                <AnimatedText text={"- " + feature} type={"list"} />
-              </li>
-            );
+            return <li key={index}>{"- " + feature}</li>;
           })}
-          <li>
-            <AnimatedText text={skillSet} type={"list"} />
-          </li>
+          <li>{/* <AnimatedText text={skillSet} type={"list"} /> */}</li>
         </div>
         <AnimatedButton data={data.detail} />
       </div>

@@ -1,7 +1,7 @@
 import { useRef } from "react";
 import styles from "./AnimatedButton.module.scss";
 import { gsap } from "gsap";
-import classnames from "classnames";
+
 export type Props = {
   data: {
     copy: string;
@@ -29,13 +29,13 @@ function AnimatedButton({ data }: Props) {
   const onLeave = ({ currentTarget }: { currentTarget: any }) => {
     gsap.to(currentTarget, {
       backgroundColor: "#575757",
-      duration: 0.2,
+      duration: 0.5,
       ease: "power2.out",
     });
     gsap.to(chevronRef.current, {
       backgroundColor: "#575757",
       x: 0,
-      duration: 0.2,
+      duration: 0.5,
       ease: "power2.out",
     });
   };

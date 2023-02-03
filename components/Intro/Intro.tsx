@@ -13,14 +13,14 @@ function Intro({ data }: Props) {
     <section className={styles.Intro} id="title">
       <div className={styles.container}>
         <h6 className={styles.preface}>
-          <AnimatedText text={"Hi, I'm"} type={"title"} />
+          <AnimatedText text={"Hi, I'm"} />
         </h6>
         <h1 className={styles.title}>
-          <AnimatedText text={data.title} type={"title"} />
+          <AnimatedText text={data.title} />
         </h1>
         <div className={styles.desc}>
           {data.description.map((desc, index) => {
-            return <AnimatedText key={index} text={desc} type={"paragraph"} />;
+            return <p key={index}>{desc}</p>;
           })}
         </div>
         <ContactRef />

@@ -1,28 +1,41 @@
-import { useEffect } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import styles from "./ContactRef.module.scss";
+import { ScrollTrigger } from "gsap/dist/ScrollTrigger";
+import classNames from "classnames";
+gsap.registerPlugin(ScrollTrigger);
 
 function ContactRef() {
+  const contactRef = useRef(null);
+
   useEffect(() => {
-    gsap.fromTo(
-      ".icon",
-      {
-        y: 70,
-        opacity: 0,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1.5,
-        stagger: 0.2,
-        ease: "power3.out",
-      }
-    );
+    const contacts = gsap.utils.toArray(".contact");
+    contacts.forEach((contact: any) => {
+      gsap.fromTo(
+        contact.querySelectorAll(".icon"),
+        {
+          y: 70,
+          opacity: 0,
+          delay: 0.5,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 1.5,
+          stagger: 0.2,
+          ease: "power3.out",
+          scrollTrigger: {
+            trigger: contact,
+            toggleActions: "play none none none",
+          },
+        }
+      );
+    });
   }, []);
 
   return (
-    <section className={styles.ContactRef}>
-      <div className={styles.reference}>
+    <section className={styles.ContactRef} ref={contactRef}>
+      <div className={classNames("contact", styles.reference)}>
         <div className={"icon"}>
           <a
             href="https://github.com/yen-han"
