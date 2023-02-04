@@ -3,6 +3,7 @@ import styles from "./Project.module.scss";
 import AnimatedButton from "../AnimatedButton/AnimatedButton";
 import AnimatedText from "../AnimatedText/AnimatedText";
 import { useEffect, useState } from "react";
+import { gsap } from "gsap";
 export type Props = {
   data: {
     id: number;
@@ -28,6 +29,47 @@ function Project({ data }: Props) {
       else str += skill + ", ";
     });
     setSkillSet(str);
+
+    const descriptions = gsap.utils.toArray(".desc");
+    descriptions.forEach((desc: any) => {
+      gsap.fromTo(
+        desc,
+        {
+          y: 70,
+          opacity: 0,
+          delay: 1,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          ease: "power4.out",
+          scrollTrigger: {
+            trigger: desc,
+          },
+        }
+      );
+    });
+    const features = gsap.utils.toArray(".feature");
+    features.forEach((feat: any) => {
+      gsap.fromTo(
+        feat,
+        {
+          y: 70,
+          opacity: 0,
+          delay: 1.5,
+        },
+        {
+          y: 0,
+          opacity: 1,
+          duration: 0.7,
+          ease: "power4.out",
+          scrollTrigger: {
+            trigger: feat,
+          },
+        }
+      );
+    });
   });
   return (
     <section className={classnames(styles.Project)}>
@@ -40,13 +82,12 @@ function Project({ data }: Props) {
         <h3 className={styles.prjTitle}>
           <AnimatedText text={data.title} />
         </h3>
-        <p className={styles.prjDesc}>{data.description}</p>
-        <div className={styles.features}>
+        <p className={classnames("desc", styles.prjDesc)}>{data.description}</p>
+        <div className={classnames("feature", styles.features)}>
           {data.features.map((feature, index) => {
-            // return <li key={index}>- {feature}</li>;
             return <li key={index}>{"- " + feature}</li>;
           })}
-          <li>{/* <AnimatedText text={skillSet} type={"list"} /> */}</li>
+          <li>{skillSet}</li>
         </div>
         <AnimatedButton data={data.detail} />
       </div>

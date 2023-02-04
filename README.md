@@ -9,6 +9,7 @@ The page is built with Next.js, React, TypeScript, SASS, Bootstrap.
 
 ### Improvement
 
-- [ ] Text animator
+- [ ] Text animator for text block
+- [ ] Make animation with Timeline
 - [ ] Project Detailed Page(Overview, Challenges, Approach, Retrospective)
 - [ ] Layout
