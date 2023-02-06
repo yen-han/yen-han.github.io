@@ -4,6 +4,7 @@ import AnimatedText from "../AnimatedText/AnimatedText";
 import { gsap } from "gsap";
 import { useEffect } from "react";
 import classnames from "classnames";
+
 export type Props = {
   data: {
     title: string;
@@ -13,23 +14,7 @@ export type Props = {
 
 function Intro({ data }: Props) {
   useEffect(() => {
-    gsap.fromTo(
-      ".description",
-      {
-        y: 70,
-        opacity: 0,
-        delay: 1,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        ease: "power4.out",
-        scrollTrigger: {
-          trigger: ".description",
-        },
-      }
-    );
+    gsap.effects.popIn(".description");
   }, []);
   return (
     <section className={styles.Intro} id="title">

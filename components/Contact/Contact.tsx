@@ -6,23 +6,7 @@ import { gsap } from "gsap";
 import { useEffect } from "react";
 function Contact() {
   useEffect(() => {
-    gsap.fromTo(
-      ".contact-desc",
-      {
-        y: 70,
-        opacity: 0,
-        delay: 1,
-      },
-      {
-        y: 0,
-        opacity: 1,
-        duration: 1,
-        ease: "power4.out",
-        scrollTrigger: {
-          trigger: ".contact-desc",
-        },
-      }
-    );
+    gsap.effects.popIn(".contact-desc");
   }, []);
   return (
     <section className={styles.Contact} id="contact">

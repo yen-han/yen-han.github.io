@@ -11,25 +11,11 @@ function ContactRef() {
   useEffect(() => {
     const contacts = gsap.utils.toArray(".contact");
     contacts.forEach((contact: any) => {
-      gsap.fromTo(
-        contact.querySelectorAll(".icon"),
-        {
-          y: 70,
-          opacity: 0,
-          delay: 0.5,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 1.5,
-          stagger: 0.2,
-          ease: "power3.out",
-          scrollTrigger: {
-            trigger: contact,
-            toggleActions: "play none none none",
-          },
-        }
-      );
+      gsap.effects.popIn(contact.querySelectorAll(".icon"), {
+        delay: 0.5,
+        duration: 1.5,
+        stagger: 0.2,
+      });
     });
   }, []);
 

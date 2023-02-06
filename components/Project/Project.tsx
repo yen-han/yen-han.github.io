@@ -32,43 +32,11 @@ function Project({ data }: Props) {
 
     const descriptions = gsap.utils.toArray(".desc");
     descriptions.forEach((desc: any) => {
-      gsap.fromTo(
-        desc,
-        {
-          y: 70,
-          opacity: 0,
-          delay: 1,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.7,
-          ease: "power4.out",
-          scrollTrigger: {
-            trigger: desc,
-          },
-        }
-      );
+      gsap.effects.popIn(desc, { duration: 0.7 });
     });
     const features = gsap.utils.toArray(".feature");
     features.forEach((feat: any) => {
-      gsap.fromTo(
-        feat,
-        {
-          y: 70,
-          opacity: 0,
-          delay: 1.5,
-        },
-        {
-          y: 0,
-          opacity: 1,
-          duration: 0.7,
-          ease: "power4.out",
-          scrollTrigger: {
-            trigger: feat,
-          },
-        }
-      );
+      gsap.effects.popIn(feat, { duration: 0.7, delay: 1.5 });
     });
   });
   return (

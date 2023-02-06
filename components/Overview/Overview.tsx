@@ -26,8 +26,6 @@ function Overview({ data }: Props) {
           className={styles.image}
           src={image_src}
           alt="Picture of the message generator"
-          width={400}
-          height={400}
         />
         <div className={styles.detail}>
           <h1>{data.title}</h1>
@@ -36,7 +34,11 @@ function Overview({ data }: Props) {
             {data.skills.map((skill, index) => (
               <>
                 <span key={index}>{skill}</span>
-                <span className={styles.bar}> | </span>
+                {index == data.skills.length - 1 ? (
+                  <></>
+                ) : (
+                  <span className={styles.bar}> | </span>
+                )}
               </>
             ))}
           </div>

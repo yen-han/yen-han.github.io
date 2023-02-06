@@ -1,4 +1,5 @@
 import Head from "next/head";
+import gsapInit from "../utils/gsapEffect";
 
 import Intro from "../components/Intro/Intro";
 import Nav from "../components/Nav/Nav";
@@ -9,6 +10,7 @@ import styles from "./index.module.scss";
 import { projects } from "../data/projects";
 import { introduction } from "../data/introduction";
 
+gsapInit();
 export default function Home() {
   return (
     <div>
