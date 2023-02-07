@@ -1,5 +1,7 @@
+import { useEffect } from "react";
 import styles from "../Overview/Overview.module.scss";
-// import Image from "next/image";
+import { gsap } from "gsap";
+import classnames from "classnames";
 export type Props = {
   data: {
     id: number;
@@ -17,11 +19,17 @@ export type Props = {
 };
 
 function Overview({ data }: Props) {
-  let src = "../assets/video/" + data.media;
   let image_src = "/assets/images/" + data.image;
+  useEffect(() => {
+    gsap.fromTo(
+      ".container",
+      { y: 70, opacity: 0 },
+      { y: 0, opacity: 1, duration: 1, ease: "power3.out" }
+    );
+  }, []);
   return (
     <section className={styles.Overview} id="">
-      <div className={styles.container}>
+      <div className={classnames("container", styles.container)}>
         <img
           className={styles.image}
           src={image_src}
@@ -32,14 +40,9 @@ function Overview({ data }: Props) {
           <p className={styles.desc}>{data.description}</p>
           <div className={styles.skills}>
             {data.skills.map((skill, index) => (
-              <>
-                <span key={index}>{skill}</span>
-                {index == data.skills.length - 1 ? (
-                  <></>
-                ) : (
-                  <span className={styles.bar}> | </span>
-                )}
-              </>
+              <div className={styles.eachSkill} key={index}>
+                {skill}
+              </div>
             ))}
           </div>
         </div>
