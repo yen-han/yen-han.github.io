@@ -14,11 +14,19 @@ function Nav() {
       </div>
       <div className={styles.container}>
         <Link href="/#projects" className={styles.link}>
-          Projects
+          PROJECTS
         </Link>
         <Link href="/#contact" className={styles.link}>
-          Connect
+          CONTACT
         </Link>
+      </div>
+      <div className={styles.contact}>
+        <a className={styles.ask} href="mailto:yenhan.dev@gmail.com">
+          CONTACT ME
+        </a>
+        <a className={styles.resume} href="assets/YenHan_Resume.pdf" download>
+          RESUME
+        </a>
       </div>
     </nav>
   );

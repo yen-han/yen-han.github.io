@@ -1,7 +1,7 @@
 @import "styles/var.scss";
 
 .Nav {
-  padding: 12px 30px;
+  padding: 15px 30px;
   display: flex;
   position: fixed;
   top: 0;
@@ -40,7 +40,53 @@
 
   .container {
     position: absolute;
-    right: 20px;
-    top: 30%;
+    left: 120px;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .contact {
+    position: absolute;
+    right: 5%;
+    top: 50%;
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+  }
+
+  .ask {
+    background-color: $teal;
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    color: $ivory;
+    font-size: 16px;
+    margin-right: 1rem;
+
+    &:hover {
+      border: 2px solid $teal;
+      background-color: $ivory;
+      color: $teal;
+    }
+
+    @media screen and (max-width: 625px) {
+      display: none;
+    }
+  }
+
+  .resume {
+    border: 2px solid $teal;
+    padding: 0.6rem 1rem;
+    border-radius: 50px;
+    font-size: 16px;
+    color: $teal;
+
+    &:hover {
+      background-color: $teal;
+      color: $ivory;
+    }
+
+    @media screen and (max-width: 625px) {
+      display: none;
+    }
   }
 }
