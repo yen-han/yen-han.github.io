@@ -49,7 +49,7 @@ function AnimatedButton({ data }: Props) {
           onMouseLeave={onLeave}
         >
           <div className={styles.container}>
-            <p className={styles.copy}>{data.copy}</p>
+            <p className={styles.copy}>{data.copy.toUpperCase()}</p>
             <div className={styles.chevronContainer} ref={chevronRef}>
               <svg className={styles.chevron} viewBox="0 0 7 4">
                 <path
